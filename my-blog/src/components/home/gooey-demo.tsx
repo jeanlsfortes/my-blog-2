@@ -2,9 +2,12 @@
 
 import { useScreenSize } from "@/hooks/use-screen-size";
 import { SplashCursor } from "../ui/splashCursor/splash-cursor";
+import { useTranslations } from "@/hooks/use-translations";
 
-export function GooeyDemo(): React.ReactElement {
+export function GooeyDemo({ lang }: { lang: string }): React.ReactElement {
     const screenSize = useScreenSize();
+    const { t } = useTranslations(lang);
+
     return (
         <div className="relative w-full h-full min-h-[600px] flex flex-col items-center justify-center gap-8 bg-black text-center text-pretty">
             <img
@@ -20,14 +23,14 @@ export function GooeyDemo(): React.ReactElement {
             </div>
             <div className="z-10 flex flex-col items-center justify-center p-8">
                 <p className="text-white text-3xl md:text-5xl lg:text-7xl z-10 font-bold mb-4">
-                    Speaking things into existence
+                    {t('home.title')}
                 </p>
                 <p className="text-white/80 text-lg md:text-xl max-w-2xl">
-                    Olá, sou um desenvolvedor web especializado em criar experiências digitais modernas e interativas.
+                    {t('home.description')}
                 </p>
                 <div className="mt-8">
-                    <a href="/projetos" className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-white/90 transition-colors">
-                        Ver Projetos
+                    <a href={`/${lang}/projetos`} className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-white/90 transition-colors">
+                        {t('home.cta')}
                     </a>
                 </div>
             </div>
