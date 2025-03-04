@@ -1,8 +1,7 @@
-// src/dictionaries/index.ts
 import 'server-only'
 
 const dictionaries = {
-    'pt-BR': () => import('./pt-BR.json').then((module) => module.default),
+    'pt-BR': () => import('./pt-BR').then((module) => module.default),
     'en-US': () => import('./en-US.json').then((module) => module.default),
     'es': () => import('./es.json').then((module) => module.default),
 }

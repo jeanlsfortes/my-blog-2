@@ -2,14 +2,14 @@
 
 import React from "react";
 import Link from "next/link";
-import { NavItem } from "./typing/navbar.type";
-import DesktopMenu from "./desktop-menu";
-import MobileMenu from "./mobile-menu";
-import MobileMenuButton from "./mobile-menu-button";
-import { useMenu } from "./hooks/use-menu";
+import MobileMenuButton from "./mobilie/MobileMenuButton";
+import { useMenu } from "./hooks/useMenu";
 import { usePathname } from "next/navigation";
-import { LanguageSwitcher } from "@/components/language-switcher/language-switcher";
+import { LanguageSwitcher } from "@/components/languageSwitcher/LanguageSwitcher";
 import { useTranslations } from "@/hooks/use-translations";
+import DesktopMenu from "./desktop/DesktopMenu";
+import MobileMenu from "./mobilie/MobileMenu";
+import { NavItem } from "./typing/Navbar.type";
 
 export function Navbar({ lang }: { lang: string }): React.ReactElement {
   const pathname = usePathname();

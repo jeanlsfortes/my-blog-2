@@ -6,8 +6,6 @@ import { usePathname } from 'next/navigation';
 
 export function LanguageSwitcher({ currentLang }: { currentLang: string }): React.ReactElement {
     const pathname = usePathname();
-
-    // Remove o locale atual do pathname para obter o caminho base
     const pathnameWithoutLang = pathname.replace(`/${currentLang}`, '') || '/';
 
     return (

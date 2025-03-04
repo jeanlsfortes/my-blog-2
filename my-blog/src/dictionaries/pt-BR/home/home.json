@@ -1,0 +1,11 @@
+{
+    "metadata": {
+        "title": "Meu Portfólio | Desenvolvedor Web",
+        "description": "Portfólio profissional com projetos, certificados e informações de contato"
+    },
+    "home": {
+        "title": "Falando sobre mim",
+        "description": "Olá, sou um desenvolvedor web especializado em criar experiências digitais modernas e interativas.",
+        "cta": "Ver Projetos"
+    }
+}

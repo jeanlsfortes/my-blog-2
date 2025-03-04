@@ -1,11 +1,9 @@
 "use client";
 
-import { useScreenSize } from "@/hooks/use-screen-size";
 import { SplashCursor } from "../ui/splashCursor/splash-cursor";
 import { useTranslations } from "@/hooks/use-translations";
 
 export function GooeyDemo({ lang }: { lang: string }): React.ReactElement {
-    const screenSize = useScreenSize();
     const { t } = useTranslations(lang);
 
     return (

@@ -28,6 +28,10 @@
         "mobile": {
             "title": "Mobile Apps",
             "description": "Desenvolvimento de aplicativos móveis nativos e híbridos para iOS e Android."
+        },
+        "software": {
+            "title": "Software Development",
+            "description": "Desenvolvimento de software robusto e escalável utilizando C# e tecnologias relacionadas."
         }
     }
 }

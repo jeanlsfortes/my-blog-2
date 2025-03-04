@@ -2,11 +2,9 @@
 
 import { useCallback, useMemo } from "react";
 import { get } from "lodash";
-
-// Importamos os dicionários diretamente no lado do cliente
-import ptBR from "@/dictionaries/pt-BR.json";
-import enUS from "@/dictionaries/en-US.json";
-import es from "@/dictionaries/es.json";
+import ptBR from "@/dictionaries/pt-BR";
+import enUS from "@/dictionaries/en-US";
+import es from "@/dictionaries/es";
 
 const dictionaries = {
     "pt-BR": ptBR,
@@ -23,16 +21,13 @@ export function useTranslations(locale: string) {
 
     const t = useCallback(
         (key: string, params?: TranslationParams): string => {
-            // Obtém a tradução usando lodash.get para acessar propriedades aninhadas
             let translation = get(dictionary, key, key);
 
-            // Se a tradução não for encontrada, retorna a chave como fallback
             if (translation === undefined || translation === null) {
                 console.warn(`Translation key not found: ${key}`);
                 return key;
             }
 
-            // Substitui os parâmetros na string de tradução
             if (params && typeof translation === "string") {
                 Object.entries(params).forEach(([paramKey, value]) => {
                     translation = translation.replace(
@@ -47,7 +42,6 @@ export function useTranslations(locale: string) {
         [dictionary]
     );
 
-    // Função para formatar números de acordo com o locale
     const formatNumber = useCallback(
         (value: number, options?: Intl.NumberFormatOptions): string => {
             return new Intl.NumberFormat(locale, options).format(value);
@@ -55,7 +49,6 @@ export function useTranslations(locale: string) {
         [locale]
     );
 
-    // Função para formatar datas de acordo com o locale
     const formatDate = useCallback(
         (value: Date | string | number, options?: Intl.DateTimeFormatOptions): string => {
             const date = value instanceof Date ? value : new Date(value);

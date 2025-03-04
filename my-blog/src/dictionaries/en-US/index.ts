@@ -1,4 +1,4 @@
-{
+const en = {
     "metadata": {
         "title": "My Portfolio | Web Developer",
         "description": "Professional portfolio with projects, certificates and contact information"
@@ -28,10 +28,8 @@
         "mobile": {
             "title": "Mobile Apps",
             "description": "Development of native and hybrid mobile applications for iOS and Android."
-        },
-        "software": {
-            "title": "Software Development",
-            "description": "Custom software development for businesses and startups using the latest technologies."
         }
     }
-}
+};
+
+export default en;

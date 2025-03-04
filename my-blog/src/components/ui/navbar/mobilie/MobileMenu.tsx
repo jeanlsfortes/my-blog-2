@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NavItem } from "./typing/navbar.type";
+import { NavItem } from "../typing/Navbar.type";
 
 interface MobileMenuProps {
     isMenuOpen: boolean;

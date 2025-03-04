@@ -1,18 +1,14 @@
-// middleware.ts
 import { NextRequest, NextResponse } from 'next/server'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 
-// Locales suportados
 export const locales = ['pt-BR', 'en-US', 'es']
 export const defaultLocale = 'pt-BR'
 
-// Get the preferred locale, similar to above or using a library
 function getLocale(request: NextRequest): string {
     const negotiatorHeaders: Record<string, string> = {}
     request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
 
-    // @ts-ignore locales are readonly
     const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
 
     return matchLocale(languages, locales, defaultLocale)
@@ -21,7 +17,7 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname
 
-    // `/_next/` and `/api/` são sempre ignorados
+    // Skip static and API routes
     if (
         pathname.startsWith('/_next/') ||
         pathname.startsWith('/api/') ||
@@ -31,20 +27,19 @@ export function middleware(request: NextRequest) {
         return NextResponse.next()
     }
 
-    // Checa se o pathname já tem um locale
+    // Check if pathname already has a locale
     const pathnameHasLocale = locales.some(
         (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
     )
 
     if (pathnameHasLocale) return NextResponse.next()
 
-    // Redireciona se não houver locale
+    // Redirect if no locale is present
     const locale = getLocale(request)
-    const newUrl = new URL(`/${locale}${pathname.startsWith('/') ? '' : '/'}${pathname}`, request.url)
+    const newUrl = new URL(`/${locale}${pathname}`, request.url)
 
     return NextResponse.redirect(newUrl)
 }
 
-export const config = {
-    matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
-}
+// Remove this and use route segment config if needed
+// export const config = { matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']}
