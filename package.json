@@ -1,0 +1,83 @@
+{
+  "name": "my-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "commit": "git-cz",
+    "pre-commit": "lint-staged && tsc --noEmit"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.6.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lodash": "^4.17.21",
+    "lodash.get": "^4.4.2",
+    "lucide-react": "^0.477.0",
+    "negotiator": "^1.0.0",
+    "next": "^15.2.1",
+    "pnpm": "^10.5.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/lodash": "^4.17.16",
+    "@types/negotiator": "^0.6.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "commitizen": "^4.3.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.0",
+    "git-cz": "^4.9.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "tailwindcss": "^4",
+    "typescript": "^5.8.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz",
+      "maxSubjectLength": 72,
+      "subjectMinLength": 10,
+      "allowTicketNumber": true,
+      "isTicketNumberRequired": false,
+      "scopes": [],
+      "messages": {
+        "type": "Selecione o tipo de alteração que você está enviando:",
+        "subject": "Escreva uma descrição CURTA e IMPERATIVA da mudança:\n",
+        "body": "Forneça uma descrição mais detalhada (opcional):\n ",
+        "confirmCommit": "Tem certeza que deseja prosseguir com o commit acima?"
+      },
+      "validate": {
+        "subject": {
+          "format": "any",
+          "required": true,
+          "minLength": 10,
+          "maxLength": 72
+        },
+        "body": {
+          "required": false
+        }
+      },
+      "preScripts": [
+        "npm run lint",
+        "npm run build --if-present"
+      ]
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
+  }
+}
