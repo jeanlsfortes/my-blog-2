@@ -11,7 +11,7 @@ export default function MainDocuments(): React.ReactElement {
     const locale = (params.lang ?? 'pt-BR');
     const [filtro, setFiltro] = useState<string>("todos");
 
-    const { certificados: texts, certificadosData } = useMemo(() => {
+    const { certificados: texts, errorImage, certificadosData } = useMemo(() => {
         return dictionaries[locale as keyof typeof dictionaries] || dictionaries["pt-BR"];
     }, [locale]);
 
@@ -34,7 +34,10 @@ export default function MainDocuments(): React.ReactElement {
                 {certificadosFiltrados.map(certificado => (
                     <CardCertificado
                         key={certificado.id}
-                        certificado={certificado}
+                        certificado={{
+                            ...certificado,
+                            imagem: certificado.imagem ?? errorImage
+                        }}
                         nomesCategoria={texts.categorias}
                         botaoTexto={texts.verCertificado}
                     />
