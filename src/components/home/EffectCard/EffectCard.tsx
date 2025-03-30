@@ -1,10 +1,15 @@
 "use client";
 
-import { useTranslations } from "@/hooks/use-translations";
-import { SplashCursor } from "../ui/splash-cursor";
+import { SplashCursor } from "../../ui/splash-cursor";
+import { useMemo } from "react";
+import { dictionary } from "./effect-card.dictionaries";
 
-export function GooeyDemo({ lang }: { lang: string }): React.ReactElement {
-    const { t } = useTranslations(lang);
+export function EffectCard({ lang }: { lang: string }): React.ReactElement {
+    const locale = (lang ?? 'pt-BR');
+
+    const { home } = useMemo(() => {
+        return dictionary[locale as keyof typeof dictionary] || dictionary["pt-BR"];
+    }, [locale]);
 
     return (
         <div className="relative w-full h-full min-h-[600px] flex flex-col items-center justify-center gap-8 bg-black text-center text-pretty">
@@ -21,14 +26,14 @@ export function GooeyDemo({ lang }: { lang: string }): React.ReactElement {
             </div>
             <div className="z-10 flex flex-col items-center justify-center p-8">
                 <p className="text-white text-3xl md:text-5xl lg:text-7xl z-10 font-bold mb-4">
-                    {t('home.title')}
+                    {home.title}
                 </p>
                 <p className="text-white/80 text-lg md:text-xl max-w-2xl">
-                    {t('home.description')}
+                    {home.description}
                 </p>
                 <div className="mt-8">
                     <a href={`/${lang}/projects`} className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-white/90 transition-colors">
-                        {t('home.cta')}
+                        {home.cta}
                     </a>
                 </div>
             </div>

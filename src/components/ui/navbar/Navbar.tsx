@@ -18,7 +18,7 @@ export function Navbar({ lang }: { lang: string }): React.ReactElement {
     { label: t('nav.home'), href: `/${lang}` },
     { label: t('nav.about'), href: `/${lang}/about` },
     { label: t('nav.certificates'), href: `/${lang}/certificates` },
-    { label: t('nav.projects'), href: `/${lang}/projetos` },
+    { label: t('nav.projects'), href: `/${lang}/projects` },
   ];
 
   return (

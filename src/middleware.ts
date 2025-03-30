@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { match as matchLocale } from '@formatjs/intl-localematcher'
 import Negotiator from 'negotiator'
 
-export const locales = ['pt-BR', 'en-US', 'es']
+export const locales = ['pt-BR', 'en-US', 'es-ES']
 export const defaultLocale = 'pt-BR'
 
 function getLocale(request: NextRequest): string {

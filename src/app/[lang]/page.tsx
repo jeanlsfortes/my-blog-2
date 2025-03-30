@@ -1,8 +1,8 @@
 import React from "react"
-import { GooeyDemo } from "@/components/home/GooeyDemo"
 import { getDictionary } from "@/dictionaries"
 import { Metadata } from "next"
-import { MyServices } from "@/components/home/MyServices"
+import { MyServices } from "@/components/home/myServices/MyServices"
+import { EffectCard } from "@/components/home/EffectCard/EffectCard"
 
 type Props = {
     params: { lang: string }
@@ -23,7 +23,7 @@ export default async function Home({ params }: Props) {
 
     return (
         <main className="flex min-h-screen flex-col">
-            <GooeyDemo lang={lang} />
+            <EffectCard lang={lang} />
             <MyServices lang={lang} />
         </main>
     )

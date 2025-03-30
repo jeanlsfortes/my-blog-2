@@ -25,8 +25,8 @@ export function LanguageSwitcher({ currentLang }: { currentLang: string }): Reac
                 EN
             </Link>
             <Link
-                href={`/es${pathnameWithoutLang}`}
-                className={`text-sm px-2 py-1 rounded ${currentLang === 'es' ? 'bg-white text-black' : 'text-white/70 hover:text-white'
+                href={`/es-ES${pathnameWithoutLang}`}
+                className={`text-sm px-2 py-1 rounded ${currentLang === 'es-ES' ? 'bg-white text-black' : 'text-white/70 hover:text-white'
                     }`}
             >
                 ES
