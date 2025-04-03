@@ -8,6 +8,7 @@ interface Certificado {
     descricao: string;
     imagem: string;
     categoria: string;
+    link: string;
 }
 
 interface Categoria {
@@ -30,9 +31,17 @@ const CardCertificado: React.FC<CardCertificadoProps> = ({
         cat => cat.id === certificado.categoria
     )?.nome || certificado.categoria;
 
+    const handleRedirect = () => {
+        if (certificado.link && (certificado.link.startsWith('http://') || certificado.link.startsWith('https://'))) {
+            window.open(certificado.link, '_blank');
+        } else {
+            console.error('Link inválido ou não fornecido');
+        }
+    };
+
     return (
         <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <div className="h-48 overflow-hidden">
+            <div className="h-75 overflow-hidden">
                 <img
                     src={certificado.imagem}
                     alt={certificado.nome}
@@ -54,7 +63,7 @@ const CardCertificado: React.FC<CardCertificadoProps> = ({
 
                 <p className="text-gray-700">{certificado.descricao}</p>
 
-                <button className="mt-4 text-black font-medium hover:underline">
+                <button onClick={handleRedirect} className="mt-4 text-black font-medium hover:underline">
                     {botaoTexto}
                 </button>
             </div>

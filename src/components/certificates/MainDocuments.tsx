@@ -5,6 +5,8 @@ import { useParams } from "next/navigation";
 import FiltroCategoria from "./components/FiltroCategoria";
 import CardCertificado from "./components/CardCertificado";
 import { dictionaries } from "./dictionary/dictionaries";
+import CategoriaTopicos from "./components/CategoryTopics";
+import CategoryTopics from "./components/CategoryTopics";
 
 export default function MainDocuments(): React.ReactElement {
     const params = useParams();
@@ -28,6 +30,11 @@ export default function MainDocuments(): React.ReactElement {
                 categorias={texts.categorias}
                 filtroAtivo={filtro}
                 aoFiltrar={setFiltro}
+            />
+
+            <CategoryTopics
+                categorias={texts.categorias}
+                filtroAtivo={filtro}
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

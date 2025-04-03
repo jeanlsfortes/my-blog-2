@@ -24,7 +24,7 @@ export default function IntroductionAboutMe() {
                 </div>
 
                 <PhotoAlbum
-                    urlFoto={"https://media.licdn.com/dms/image/v2/C4D03AQFMzUoA-xYQ-Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1632852895697?e=1746662400&v=beta&t=evGcntKF5E6Kb0OC5ko2wR4qUZyAfs2mH29f8AqOnP0"}
+                    urlFoto={"/images/fotoTerno.jpeg"}
                     email={"jeanlucaseh10@gmail.com"}
                     localizacao={"Cuiabá-MT"}
                 />
