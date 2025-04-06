@@ -40,6 +40,3 @@ export function middleware(request: NextRequest) {
 
     return NextResponse.redirect(newUrl)
 }
-
-// Remove this and use route segment config if needed
-// export const config = { matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']}

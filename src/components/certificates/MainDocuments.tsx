@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import FiltroCategoria from "./components/FiltroCategoria";
 import CardCertificado from "./components/CardCertificado";
 import { dictionaries } from "./dictionary/dictionaries";
-import CategoriaTopicos from "./components/CategoryTopics";
 import CategoryTopics from "./components/CategoryTopics";
 
 export default function MainDocuments(): React.ReactElement {

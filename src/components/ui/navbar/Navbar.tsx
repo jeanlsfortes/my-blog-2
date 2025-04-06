@@ -9,10 +9,14 @@ import DesktopMenu from "./desktop/DesktopMenu";
 import MobileMenu from "./mobilie/MobileMenu";
 import { NavItem } from "./typing/Navbar.type";
 import { LanguageSwitcher } from "@/components/language-switcher/LanguageSwitcher";
+import { useParams } from "next/navigation";
 
-export function Navbar({ lang }: { lang: string }): React.ReactElement {
+export function Navbar(): React.ReactElement {
+  const params = useParams();
+  const lang = Array.isArray(params.lang) ? params.lang[0] : (params.lang ?? 'pt-BR');
+
   const { isMenuOpen, toggleMenu, closeMenu } = useMenu();
-  const { t } = useTranslations(lang);
+  const { t } = useTranslations(lang as string);
 
   const navItems: NavItem[] = [
     { label: t('nav.home'), href: `/${lang}` },

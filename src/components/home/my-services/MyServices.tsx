@@ -5,9 +5,11 @@ import { useMemo } from "react";
 import { icons } from "./my-services.icons";
 import { dictionary } from "./my-services.dictionaries";
 import { ServiceKey } from "../service-card/typing/serviceCard.type";
+import { useParams } from "next/navigation";
 
-export function MyServices({ lang }: { lang: string }): React.ReactElement {
-    const locale = (lang ?? 'pt-BR');
+export function MyServices(): React.ReactElement {
+    const params = useParams();
+    const locale = (params.lang ?? 'pt-BR');
 
     const { services, title } = useMemo(() => {
         return dictionary[locale as keyof typeof dictionary] || dictionary["pt-BR"];

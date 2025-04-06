@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface Certificado {
     id: number;
@@ -41,11 +42,15 @@ const CardCertificado: React.FC<CardCertificadoProps> = ({
 
     return (
         <div className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <div className="h-75 overflow-hidden">
-                <img
+            <div className="h-75 overflow-hidden relative">
+                <Image
                     src={certificado.imagem}
                     alt={certificado.nome}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={85}
+                    priority={false}
                 />
             </div>
 
