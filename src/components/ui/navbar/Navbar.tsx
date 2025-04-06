@@ -4,11 +4,11 @@ import React from "react";
 import Link from "next/link";
 import MobileMenuButton from "./mobilie/MobileMenuButton";
 import { useMenu } from "./hooks/useMenu";
-import { LanguageSwitcher } from "@/components/languageSwitcher/LanguageSwitcher";
 import { useTranslations } from "@/hooks/use-translations";
 import DesktopMenu from "./desktop/DesktopMenu";
 import MobileMenu from "./mobilie/MobileMenu";
 import { NavItem } from "./typing/Navbar.type";
+import { LanguageSwitcher } from "@/components/language-switcher/LanguageSwitcher";
 
 export function Navbar({ lang }: { lang: string }): React.ReactElement {
   const { isMenuOpen, toggleMenu, closeMenu } = useMenu();
@@ -18,7 +18,7 @@ export function Navbar({ lang }: { lang: string }): React.ReactElement {
     { label: t('nav.home'), href: `/${lang}` },
     { label: t('nav.about'), href: `/${lang}/about` },
     { label: t('nav.certificates'), href: `/${lang}/certificates` },
-    { label: t('nav.projects'), href: `/${lang}/projects` },
+    { label: t('nav.projects'), href: `https://github.com/jeanlsfortes` },
   ];
 
   return (

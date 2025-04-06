@@ -1,8 +1,8 @@
 import React from "react"
 import { getDictionary } from "@/dictionaries"
 import { Metadata } from "next"
-import { MyServices } from "@/components/home/myServices/MyServices"
-import { EffectCard } from "@/components/home/EffectCard/EffectCard"
+import { MyServices } from "@/components/home/my-services/MyServices"
+import { EffectCard } from "@/components/home/effect-card/EffectCard"
 
 type Props = {
     params: { lang: string }

@@ -102,6 +102,16 @@ export const dictionaries = {
             },
             {
                 id: 2,
+                nome: "Campeão Estadual LeetCode e Semifinalista na Maratona de Programação Nacional CSBC",
+                instituicao: "CSBC - Sociedade Brasileira de Computação",
+                data: "2022",
+                descricao: "Reconhecimento por desempenho excepcional em competições de programação, destacando habilidades em algoritmos e resolução de problemas.",
+                imagem: "/images/maratonaCSBC.jpg",
+                link: "https://maratona.sbc.org.br/",
+                categoria: "graduacao",
+            },
+            {
+                id: 3,
                 nome: "Desenvolvimento Fullstack Next + Spring Boot",
                 instituicao: "Udemy",
                 data: "Fevereiro 2024",
@@ -111,7 +121,7 @@ export const dictionaries = {
                 categoria: "fullstack"
             },
             {
-                id: 3,
+                id: 8,
                 nome: "Spring Boot Expert: JPA, RESTFul API, Security",
                 instituicao: "Udemy",
                 data: "Fevereiro 2024",
@@ -263,6 +273,16 @@ export const dictionaries = {
             },
             {
                 id: 2,
+                nome: "State Champion LeetCode and Semifinalist in CSBC National Programming Marathon",
+                instituicao: "CSBC - Brazilian Computer Society",
+                data: "2022",
+                descricao: "Recognition for exceptional performance in programming competitions, highlighting skills in algorithms and problem-solving.",
+                imagem: "/images/maratonaCSBC.jpg",
+                link: "https://maratona.sbc.org.br/",
+                categoria: "graduacao",
+            },
+            {
+                id: 3,
                 nome: "Fullstack Development Next + Spring Boot",
                 instituicao: "Udemy",
                 data: "February 2024",
@@ -272,7 +292,7 @@ export const dictionaries = {
                 categoria: "fullstack"
             },
             {
-                id: 3,
+                id: 4,
                 nome: "Spring Boot Expert: JPA, RESTFul API, Security",
                 instituicao: "Udemy",
                 data: "February 2024",
@@ -282,7 +302,7 @@ export const dictionaries = {
                 categoria: "backend"
             },
             {
-                id: 4,
+                id: 5,
                 nome: "TDD in C# with xUnit, NUnit and Moq",
                 instituicao: "Udemy",
                 data: "August 2024",
@@ -292,7 +312,7 @@ export const dictionaries = {
                 categoria: "testes"
             },
             {
-                id: 5,
+                id: 8,
                 nome: "JAVA Santander Bootcamp Course",
                 instituicao: "Ada Tech/Santander",
                 data: "September 2022",
@@ -424,6 +444,16 @@ export const dictionaries = {
             },
             {
                 id: 2,
+                nome: "Campeón Estatal LeetCode y Semifinalista en la Maratona Nacional de Programación CSBC",
+                instituicao: "CSBC - Sociedad Brasileña de Computación",
+                data: "2022",
+                descricao: "Reconocimiento por desempeño excepcional en competencias de programación, destacando habilidades en algoritmos y resolución de problemas.",
+                imagem: "/images/maratonaCSBC.jpg",
+                link: "https://maratona.sbc.org.br/",
+                categoria: "graduacao",
+            },
+            {
+                id: 3,
                 nome: "Desarrollo Fullstack Next + Spring Boot",
                 instituicao: "Udemy",
                 data: "Febrero 2024",
@@ -433,7 +463,7 @@ export const dictionaries = {
                 categoria: "fullstack"
             },
             {
-                id: 3,
+                id: 4,
                 nome: "Experto en Spring Boot: JPA, API RESTFul, Seguridad",
                 instituicao: "Udemy",
                 data: "Febrero 2024",
@@ -443,7 +473,7 @@ export const dictionaries = {
                 categoria: "backend"
             },
             {
-                id: 4,
+                id: 5,
                 nome: "TDD en C# con xUnit, NUnit y Moq",
                 instituicao: "Udemy",
                 data: "Agosto 2024",
@@ -453,7 +483,7 @@ export const dictionaries = {
                 categoria: "testes"
             },
             {
-                id: 5,
+                id: 8,
                 nome: "Curso JAVA Santander Bootcamp",
                 instituicao: "Ada Tech/Santander",
                 data: "Septiembre 2022",

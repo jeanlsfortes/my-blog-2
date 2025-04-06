@@ -2,7 +2,7 @@
 
 import { ServiceCardProps } from "./typing/serviceCard.type";
 
-const ServiceCard = ({ title, description, icon }: ServiceCardProps): React.ReactElement => {
+export default function ServiceCard({ title, description, icon }: ServiceCardProps) {
     return (
         <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
             <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-4">
@@ -13,5 +13,3 @@ const ServiceCard = ({ title, description, icon }: ServiceCardProps): React.Reac
         </div>
     );
 };
-
-export default ServiceCard;

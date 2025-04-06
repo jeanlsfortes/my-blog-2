@@ -12,23 +12,23 @@ export default function MyTrajectory() {
     const params = useParams()
     const locale = (params.lang ?? 'pt-BR')
 
-    const { rote, experience } = useMemo(() => {
+    const { route, experience } = useMemo(() => {
         return dictionaries[locale as keyof typeof dictionaries] || dictionaries["pt-BR"];
     }, [locale]);
 
     return (
         <div className="bg-white py-16">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
-                <h2 className="text-3xl font-bold mb-12 text-center">{rote}</h2>
+                <h2 className="text-3xl font-bold mb-12 text-center">{route}</h2>
 
                 <div className="space-y-12">
                     {convertJsonToExperience(experience as Experience[]).map((exp, index) => (
                         <ExperienceItems
                             key={index}
-                            periodo={exp.periodo}
-                            cargo={exp.cargo}
-                            empresa={exp.empresa}
-                            descricao={exp.descricao}
+                            period={exp.period}
+                            position={exp.position}
+                            company={exp.company}
+                            description={exp.description}
                         />
                     ))}
                 </div>

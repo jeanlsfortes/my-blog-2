@@ -1,10 +1,10 @@
 "use client";
 
-import ServiceCard from "../serviceCard/ServiceCard";
-import { ServiceKey } from "../serviceCard/typing/serviceCard.type";
+import ServiceCard from "../service-card/ServiceCard";
 import { useMemo } from "react";
 import { icons } from "./my-services.icons";
 import { dictionary } from "./my-services.dictionaries";
+import { ServiceKey } from "../service-card/typing/serviceCard.type";
 
 export function MyServices({ lang }: { lang: string }): React.ReactElement {
     const locale = (lang ?? 'pt-BR');

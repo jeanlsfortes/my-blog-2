@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useMemo } from "react";
-import PhotoAlbum from "../photoAlbum/PhotoAlbum";
 import { useParams } from "next/navigation";
 import { dictionaries } from "./dictionary/dictionaries";
 import AboutMe from "./components/AboutMe";
 import Skills from "./components/Skills";
+import PhotoAlbum from "../photo-album/PhotoAlbum";
 
 export default function IntroductionAboutMe() {
     const params = useParams()
@@ -24,7 +24,7 @@ export default function IntroductionAboutMe() {
                 </div>
 
                 <PhotoAlbum
-                    urlFoto={"/images/fotoTerno.jpeg"}
+                    urlFoto={"/images/animeMe.png"}
                     email={"jeanlucaseh10@gmail.com"}
                     localizacao={"Cuiabá-MT"}
                 />

@@ -21,7 +21,7 @@ export default function PhotoAlbum({ urlFoto, email, localizacao }: PhotoAlbumPr
 
     return (
         <div className="relative">
-            <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+            <div className="aspect-[4/6] bg-gray-300 rounded-lg overflow-hidden ">
                 <img
                     src={urlFoto}
                     alt="Developer"
