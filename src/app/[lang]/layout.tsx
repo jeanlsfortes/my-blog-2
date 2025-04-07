@@ -3,11 +3,11 @@ import "./globals.css";
 import { Navbar } from '@/components/ui/navbar/Navbar'
 import { ReactNode } from 'react';
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
     return locales.map((lang) => ({ lang }));
 }
 
-export default async function RootLayout({
+export default function RootLayout({
     children,
 }: {
     children: ReactNode;
