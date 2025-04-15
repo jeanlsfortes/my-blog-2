@@ -9,7 +9,6 @@ interface SkillProps {
 }
 
 export default function Skills({ skill }: SkillProps) {
-    console.log('skill.categories)', skill);
     return (
         <div className="mt-8 space-y-6">
             <h2 className="text-2xl font-semibold">{skill.title}</h2>

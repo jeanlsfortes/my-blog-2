@@ -6,12 +6,19 @@ export const locales = ['pt-BR', 'en-US', 'es-ES']
 export const defaultLocale = 'pt-BR'
 
 function getLocale(request: NextRequest): string {
-    const negotiatorHeaders: Record<string, string> = {}
-    request.headers.forEach((value, key) => (negotiatorHeaders[key] = value))
+    const acceptLanguage = request.headers.get('accept-language') || ''
+    
+    const negotiatorHeaders = {
+        'accept-language': acceptLanguage,
+    }
 
     const languages = new Negotiator({ headers: negotiatorHeaders }).languages()
-
-    return matchLocale(languages, locales, defaultLocale)
+    
+    try {
+        return matchLocale(languages, locales, defaultLocale)
+    } catch {
+        return defaultLocale
+    }
 }
 
 export function middleware(request: NextRequest) {
@@ -39,4 +46,10 @@ export function middleware(request: NextRequest) {
     const newUrl = new URL(`/${locale}${pathname}`, request.url)
 
     return NextResponse.redirect(newUrl)
+}
+
+export const config = {
+    matcher: [
+        '/((?!_next|api|static|.*\\..*).*)',
+    ],
 }

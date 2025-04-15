@@ -19,8 +19,6 @@ export function useTranslations(locale: string) {
         return dictionaries[locale as keyof typeof dictionaries] || dictionaries["pt-BR"];
     }, [locale]);
 
-    console.log('dictionary', dictionary)
-
     const t = useCallback(
         (key: string, params?: TranslationParams): string => {
             let translation = get(dictionary, key, key);
