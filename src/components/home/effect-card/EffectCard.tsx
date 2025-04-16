@@ -43,14 +43,6 @@ export function EffectCard(): React.ReactElement {
         <p className="text-white/80 text-lg md:text-xl max-w-2xl">
           {home.description}
         </p>
-        <div className="mt-8">
-          <a
-            href={`/${params.lang}/projects`}
-            className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-white/90 transition-colors"
-          >
-            {home.cta}
-          </a>
-        </div>
       </div>
     </div>
   );
