@@ -1,61 +1,62 @@
 {
-    "metadata": {
-        "title": "Meu Portfólio | Desenvolvedor Web",
-        "description": "Portfólio profissional com projetos, certificados e informações de contato"
+  "metadata": {
+    "title": "Meu Portfólio | Desenvolvedor Web",
+    "description": "Portfólio profissional com projetos, certificados e informações de contato"
+  },
+  "nav": {
+    "home": "Tela Inicial",
+    "about": "Sobre Mim",
+    "certificates": "Certificados",
+    "projects": "Projetos",
+    "achievements": "Conquistas",
+    "portfolio": "Meu Portfólio"
+  },
+  "home": {
+    "title": "Falando sobre mim",
+    "description": "Olá, sou um desenvolvedor web especializado em criar experiências digitais modernas e interativas.",
+    "cta": "Ver Projetos"
+  },
+  "services": {
+    "title": "Meus Serviços",
+    "web": {
+      "title": "Desenvolvimento Web",
+      "description": "Criação de sites e aplicações web modernas com foco em performance e experiência do usuário."
     },
-    "nav": {
-        "home": "Tela Inicial",
-        "about": "Sobre Mim",
-        "certificates": "Certificados",
-        "projects": "Projetos",
-        "portfolio": "Meu Portfólio"
+    "uxui": {
+      "title": "UX/UI Design",
+      "description": "Design de interfaces intuitivas e atraentes para melhorar a experiência do usuário."
     },
-    "home": {
-        "title": "Falando sobre mim",
-        "description": "Olá, sou um desenvolvedor web especializado em criar experiências digitais modernas e interativas.",
-        "cta": "Ver Projetos"
+    "mobile": {
+      "title": "Mobile Apps",
+      "description": "Desenvolvimento de aplicativos móveis nativos e híbridos para iOS e Android."
     },
-    "services": {
-        "title": "Meus Serviços",
-        "web": {
-            "title": "Desenvolvimento Web",
-            "description": "Criação de sites e aplicações web modernas com foco em performance e experiência do usuário."
-        },
-        "uxui": {
-            "title": "UX/UI Design",
-            "description": "Design de interfaces intuitivas e atraentes para melhorar a experiência do usuário."
-        },
-        "mobile": {
-            "title": "Mobile Apps",
-            "description": "Desenvolvimento de aplicativos móveis nativos e híbridos para iOS e Android."
-        },
-        "software": {
-            "title": "Software Development",
-            "description": "Desenvolvimento de software robusto e escalável utilizando C# e tecnologias relacionadas."
-        }
+    "software": {
+      "title": "Software Development",
+      "description": "Desenvolvimento de software robusto e escalável utilizando C# e tecnologias relacionadas."
+    }
+  },
+  "PhotoAlbum": {
+    "Email": "Email",
+    "location": "Localização"
+  },
+  "Experience": [
+    {
+      "periodo": "2021 - Presente",
+      "cargo": "Desenvolvedor Full Stack Sênior",
+      "empresa": "Empresa Tecnologia Ltda.",
+      "descricao": "Desenvolvimento de aplicações web e móveis para clientes de diversos setores. Liderança técnica em projetos e mentoria de desenvolvedores juniores."
     },
-    "PhotoAlbum": {
-        "Email": "Email",
-        "location": "Localização"
+    {
+      "periodo": "2018 - 2021",
+      "cargo": "Desenvolvedor Frontend",
+      "empresa": "Agência Web Criativa",
+      "descricao": "Desenvolvimento de interfaces de usuário para websites e aplicações web. Implementação de designs responsivos e animações interativas."
     },
-    "Experience": [
-        {
-            "periodo": "2021 - Presente",
-            "cargo": "Desenvolvedor Full Stack Sênior",
-            "empresa": "Empresa Tecnologia Ltda.",
-            "descricao": "Desenvolvimento de aplicações web e móveis para clientes de diversos setores. Liderança técnica em projetos e mentoria de desenvolvedores juniores."
-        },
-        {
-            "periodo": "2018 - 2021",
-            "cargo": "Desenvolvedor Frontend",
-            "empresa": "Agência Web Criativa",
-            "descricao": "Desenvolvimento de interfaces de usuário para websites e aplicações web. Implementação de designs responsivos e animações interativas."
-        },
-        {
-            "periodo": "2016 - 2018",
-            "cargo": "Bacharelado em Ciência da Computação",
-            "empresa": "Universidade Federal",
-            "descricao": "Formação em Ciência da Computação com foco em desenvolvimento web e engenharia de software."
-        }
-    ]
+    {
+      "periodo": "2016 - 2018",
+      "cargo": "Bacharelado em Ciência da Computação",
+      "empresa": "Universidade Federal",
+      "descricao": "Formação em Ciência da Computação com foco em desenvolvimento web e engenharia de software."
+    }
+  ]
 }

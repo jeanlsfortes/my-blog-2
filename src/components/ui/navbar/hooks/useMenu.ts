@@ -3,19 +3,19 @@
 import { useState } from "react";
 
 export function useMenu() {
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-    const closeMenu = () => {
-        setIsMenuOpen(false);
-    };
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
-    return {
-        isMenuOpen,
-        toggleMenu,
-        closeMenu
-    };
+  return {
+    isMenuOpen,
+    toggleMenu,
+    closeMenu,
+  };
 }

@@ -7,60 +7,65 @@ import enUS from "@/dictionaries/en-US";
 import es from "@/dictionaries/es";
 
 const dictionaries = {
-    "pt-BR": ptBR,
-    "en-US": enUS,
-    "es": es
+  "pt-BR": ptBR,
+  "en-US": enUS,
+  "es-ES": es,
 };
 
 type TranslationParams = Record<string, string | number>;
 
 export function useTranslations(locale: string) {
-    const dictionary = useMemo(() => {
-        return dictionaries[locale as keyof typeof dictionaries] || dictionaries["pt-BR"];
-    }, [locale]);
-
-    const t = useCallback(
-        (key: string, params?: TranslationParams): string => {
-            let translation = get(dictionary, key, key);
-
-            if (translation === undefined || translation === null) {
-                console.warn(`Translation key not found: ${key}`);
-                return key;
-            }
-
-            if (params && typeof translation === "string") {
-                Object.entries(params).forEach(([paramKey, value]) => {
-                    translation = translation.replace(
-                        new RegExp(`{{\\s*${paramKey}\\s*}}`, 'g'),
-                        String(value)
-                    );
-                });
-            }
-
-            return String(translation);
-        },
-        [dictionary]
+  const dictionary = useMemo(() => {
+    return (
+      dictionaries[locale as keyof typeof dictionaries] || dictionaries["pt-BR"]
     );
+  }, [locale]);
 
-    const formatNumber = useCallback(
-        (value: number, options?: Intl.NumberFormatOptions): string => {
-            return new Intl.NumberFormat(locale, options).format(value);
-        },
-        [locale]
-    );
+  const t = useCallback(
+    (key: string, params?: TranslationParams): string => {
+      let translation = get(dictionary, key, key);
 
-    const formatDate = useCallback(
-        (value: Date | string | number, options?: Intl.DateTimeFormatOptions): string => {
-            const date = value instanceof Date ? value : new Date(value);
-            return new Intl.DateTimeFormat(locale, options).format(date);
-        },
-        [locale]
-    );
+      if (translation === undefined || translation === null) {
+        console.warn(`Translation key not found: ${key}`);
+        return key;
+      }
 
-    return {
-        t,
-        formatNumber,
-        formatDate,
-        locale
-    };
+      if (params && typeof translation === "string") {
+        Object.entries(params).forEach(([paramKey, value]) => {
+          translation = translation.replace(
+            new RegExp(`{{\\s*${paramKey}\\s*}}`, "g"),
+            String(value),
+          );
+        });
+      }
+
+      return String(translation);
+    },
+    [dictionary],
+  );
+
+  const formatNumber = useCallback(
+    (value: number, options?: Intl.NumberFormatOptions): string => {
+      return new Intl.NumberFormat(locale, options).format(value);
+    },
+    [locale],
+  );
+
+  const formatDate = useCallback(
+    (
+      value: Date | string | number,
+      options?: Intl.DateTimeFormatOptions,
+    ): string => {
+      const date = value instanceof Date ? value : new Date(value);
+      return new Intl.DateTimeFormat(locale, options).format(date);
+    },
+    [locale],
+  );
+
+  return {
+    t,
+    formatNumber,
+    formatDate,
+    locale,
+  };
 }

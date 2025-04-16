@@ -6,28 +6,27 @@ import { usePathname } from "next/navigation";
 import { NavItem } from "../typing/Navbar.type";
 
 interface DesktopMenuProps {
-    navItems: NavItem[];
+  navItems: NavItem[];
 }
 
 export default function DesktopMenu({
-    navItems
+  navItems,
 }: DesktopMenuProps): React.ReactElement {
-    const pathname = usePathname();
+  const pathname = usePathname();
 
-    return (
-        <div className="hidden md:flex space-x-8">
-            {navItems.map((item) => (
-                <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`hover:text-white/80 transition-colors ${pathname === item.href
-                        ? "text-white font-medium"
-                        : "text-white/60"
-                        }`}
-                >
-                    {item.label}
-                </Link>
-            ))}
-        </div>
-    );
+  return (
+    <div className="hidden md:flex space-x-8">
+      {navItems.map((item) => (
+        <Link
+          key={item.href}
+          href={item.href}
+          className={`hover:text-white/80 transition-colors ${
+            pathname === item.href ? "text-white font-medium" : "text-white/60"
+          }`}
+        >
+          {item.label}
+        </Link>
+      ))}
+    </div>
+  );
 }

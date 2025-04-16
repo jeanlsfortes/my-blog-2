@@ -1,9 +1,9 @@
 {
-    "nav": {
-        "home": "Tela Inicial",
-        "about": "Sobre Mim",
-        "certificates": "Certificados",
-        "projects": "Projetos",
-        "portfolio": "Meu Portfólio"
-    }
+  "nav": {
+    "home": "Tela Inicial",
+    "about": "Sobre Mim",
+    "certificates": "Certificados",
+    "projects": "Projetos",
+    "portfolio": "Meu Portfólio"
+  }
 }

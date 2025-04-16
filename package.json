@@ -8,8 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "commit": "git-cz",
-    "pre-commit": "lint-staged && tsc --noEmit",
-    "export": "next build && next export"
+    "pre-commit": "lint-staged && tsc --noEmit && prettier --write .",
+    "export": "next build && next export",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -46,6 +47,7 @@
     "git-cz": "^4.9.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5.8.2"
   },

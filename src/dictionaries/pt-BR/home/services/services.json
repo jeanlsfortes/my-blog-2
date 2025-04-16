@@ -1,17 +1,17 @@
 {
-    "services": {
-        "title": "Meus Serviços",
-        "web": {
-            "title": "Desenvolvimento Web",
-            "description": "Criação de sites e aplicações web modernas com foco em performance e experiência do usuário."
-        },
-        "uxui": {
-            "title": "UX/UI Design",
-            "description": "Design de interfaces intuitivas e atraentes para melhorar a experiência do usuário."
-        },
-        "mobile": {
-            "title": "Mobile Apps",
-            "description": "Desenvolvimento de aplicativos móveis nativos e híbridos para iOS e Android."
-        }
+  "services": {
+    "title": "Meus Serviços",
+    "web": {
+      "title": "Desenvolvimento Web",
+      "description": "Criação de sites e aplicações web modernas com foco em performance e experiência do usuário."
+    },
+    "uxui": {
+      "title": "UX/UI Design",
+      "description": "Design de interfaces intuitivas e atraentes para melhorar a experiência do usuário."
+    },
+    "mobile": {
+      "title": "Mobile Apps",
+      "description": "Desenvolvimento de aplicativos móveis nativos e híbridos para iOS e Android."
     }
+  }
 }
